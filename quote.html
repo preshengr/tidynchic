@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request a bulk laundry quotation from Tidy & Chic Cleaning Services">
+  <title>Request Quote - Tidy & Chic Cleaning Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Tidy & Chic</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="quote.html">Request Quote</a></li>
+        <li><a href="schedule.html">Schedule Pickup</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, #1a3a52 0%, #0f2340 100%); color: white; padding: 4rem 1.5rem; text-align: center;">
+    <div class="container">
+      <h1 style="color: white; margin-bottom: 0.5rem;">Bulk Laundry Quotation</h1>
+      <p style="color: #e8dcc8; font-size: 1.1rem;">Get a customized quote for your bulk laundry needs</p>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <form data-success-message="Quotation request submitted! Our team will contact you with a customized quote within 24 hours.">
+        
+        <!-- Contact Information -->
+        <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Contact Information</h3>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company Name (Optional)</label>
+            <input type="text" id="companyName" name="companyName">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 0801 234 5678" required>
+            <div class="error-message"></div>
+          </div>
+        </div>
+
+        <!-- Pickup & Service Details -->
+        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; color: var(--navy);">Laundry Details</h3>
+
+        <div class="form-group form-row full">
+          <label for="pickupLocation">Pickup Location *</label>
+          <input type="text" id="pickupLocation" name="pickupLocation" placeholder="Enter your business address or location" required>
+          <div class="error-message"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="serviceCategory">Service Category *</label>
+            <select id="serviceCategory" name="serviceCategory" required>
+              <option value="">Select a category...</option>
+              <option value="hotel">Hotel Laundry</option>
+              <option value="school">School Laundry</option>
+              <option value="hospital">Hospital Laundry</option>
+              <option value="corporate">Corporate Laundry</option>
+              <option value="event">Event Laundry</option>
+              <option value="residential">Residential Bulk Laundry</option>
+            </select>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="laundryType">Type of Laundry *</label>
+            <input type="text" id="laundryType" name="laundryType" placeholder="e.g., uniforms, bed linens, work clothes" required>
+            <div class="error-message"></div>
+          </div>
+        </div>
+
+        <!-- Quantity & Requirements -->
+        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; color: var(--navy);">Quantity & Requirements</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Estimated Quantity (kg/week) *</label>
+            <input type="number" id="quantity" name="quantity" min="1" step="0.1" placeholder="e.g., 50" required>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="frequency">Collection Frequency *</label>
+            <select id="frequency" name="frequency" required>
+              <option value="">Select frequency...</option>
+              <option value="daily">Daily</option>
+              <option value="2-3times">2-3 Times Per Week</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="custom">Custom</option>
+            </select>
+            <div class="error-message"></div>
+          </div>
+        </div>
+
+        <!-- Special Requirements -->
+        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; color: var(--navy);">Additional Information</h3>
+
+        <div class="form-group form-row full">
+          <label for="instructions">Special Instructions & Requirements</label>
+          <textarea id="instructions" name="instructions" placeholder="Please share any special care instructions, drying preferences, or other requirements..."></textarea>
+        </div>
+
+        <!-- Pricing Preference -->
+        <div class="form-group form-row full">
+          <label for="budget">Budget Range (Optional)</label>
+          <select id="budget" name="budget">
+            <option value="">No specific budget</option>
+            <option value="under50k">Under ₦50,000/month</option>
+            <option value="50-100k">₦50,000 - ₦100,000/month</option>
+            <option value="100-200k">₦100,000 - ₦200,000/month</option>
+            <option value="200k+">₦200,000+/month</option>
+          </select>
+        </div>
+
+        <!-- Consent -->
+        <div class="form-group form-row full">
+          <label style="display: flex; gap: 0.5rem; cursor: pointer; font-weight: normal;">
+            <input type="checkbox" name="consent" required>
+            <span>I authorize Tidy & Chic to contact me with a customized quotation</span>
+          </label>
+          <div class="error-message"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem;">
+          Request Quotation
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section style="background: #f8f9fa; padding: 3rem 1.5rem;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Why Choose Tidy & Chic for Bulk Orders?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Customized Solutions</h4>
+          <p>Tailored packages designed for your specific business needs and requirements.</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Competitive Pricing</h4>
+          <p>Volume discounts and flexible payment terms for corporate and bulk clients.</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Consistent Quality</h4>
+          <p>Reliable service with detailed inventory tracking and quality assurance.</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚚</div>
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Flexible Scheduling</h4>
+          <p>Regular pickups and deliveries on your preferred schedule.</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">👥</div>
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Dedicated Support</h4>
+          <p>Assigned account manager for seamless communication and service.</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Proven Track Record</h4>
+          <p>Trusted by businesses across Abuja for reliable bulk laundry services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section style="background: linear-gradient(135deg, var(--gold) 0%, #c49a2a 100%); color: var(--navy); padding: 3rem 1.5rem; text-align: center;">
+    <div class="container">
+      <h3 style="color: var(--navy); margin-bottom: 1rem;">Prefer to Discuss Directly?</h3>
+      <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Call our corporate team to discuss your bulk laundry requirements</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <strong>Phone:</strong><br>
+          <a href="tel:08038009469" style="color: var(--navy); font-weight: 600; font-size: 1.1rem;">08038009469</a>
+        </div>
+        <div style="border-left: 2px solid var(--navy); padding-left: 2rem;">
+          <strong>WhatsApp:</strong><br>
+          <a href="https://wa.me/2348038009469" style="color: var(--navy); font-weight: 600; font-size: 1.1rem;">Message us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Tidy & Chic</h4>
+        <p>Premium laundry and cleaning services dedicated to quality garment care and customer satisfaction.</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="order.html">Place Order</a></li>
+          <li><a href="quote.html">Request Quote</a></li>
+          <li><a href="schedule.html">Schedule Pickup</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Laundry Washing</a></li>
+          <li><a href="#">Dry Cleaning</a></li>
+          <li><a href="#">Express Service</a></li>
+          <li><a href="#">Corporate Laundry</a></li>
+          <li><a href="#">Pickup & Delivery</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong></p>
+        <p><a href="tel:08038009469">08038009469</a></p>
+        <p><a href="tel:07036598546">07036598546</a></p>
+        <p><strong>Address:</strong></p>
+        <p>Plot 32 Bitex Pure Water Street<br>Jahi 1, Katampe District<br>Abuja, Nigeria</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Tidy & Chic Cleaning Services. All rights reserved. | Crafted with care for your garments.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

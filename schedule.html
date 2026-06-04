@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Schedule pickup and delivery with Tidy & Chic Cleaning Services">
+  <title>Schedule Pickup - Tidy & Chic Cleaning Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Tidy & Chic</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="quote.html">Request Quote</a></li>
+        <li><a href="schedule.html">Schedule Pickup</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, #1a3a52 0%, #0f2340 100%); color: white; padding: 4rem 1.5rem; text-align: center;">
+    <div class="container">
+      <h1 style="color: white; margin-bottom: 0.5rem;">Schedule Pickup & Delivery</h1>
+      <p style="color: #e8dcc8; font-size: 1.1rem;">Easily schedule your laundry pickup and delivery times</p>
+    </div>
+  </section>
+
+  <!-- Scheduling Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <form data-success-message="Pickup scheduled successfully! We'll confirm your appointment shortly.">
+        
+        <!-- Customer Information -->
+        <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Your Information</h3>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 0801 234 5678" required>
+            <div class="error-message"></div>
+          </div>
+        </div>
+
+        <!-- Pickup Details -->
+        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; color: var(--navy);">Pickup Details</h3>
+
+        <div class="form-group form-row full">
+          <label for="pickupAddress">Pickup Address *</label>
+          <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Where should we pick up your laundry?" required>
+          <div class="error-message"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pickupDate">Pickup Date *</label>
+            <input type="date" id="pickupDate" name="pickupDate" required>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="pickupTime">Pickup Time *</label>
+            <input type="time" id="pickupTime" name="pickupTime" required>
+            <div class="error-message"></div>
+          </div>
+        </div>
+
+        <!-- Delivery Details -->
+        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; color: var(--navy);">Delivery Details</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="returnDate">Return Date *</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="returnTime">Return Time *</label>
+            <input type="time" id="returnTime" name="returnTime" required>
+            <div class="error-message"></div>
+          </div>
+        </div>
+
+        <!-- Delivery Location -->
+        <div class="form-group form-row full">
+          <label for="deliveryAddress">Delivery Address</label>
+          <input type="text" id="deliveryAddress" name="deliveryAddress" placeholder="Leave blank if same as pickup address">
+        </div>
+
+        <!-- Special Instructions -->
+        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; color: var(--navy);">Additional Information</h3>
+
+        <div class="form-group form-row full">
+          <label for="specialInstructions">Special Instructions</label>
+          <textarea id="specialInstructions" name="specialInstructions" placeholder="Any special instructions or preferences? (e.g., 'Please use side gate', 'Contact before arrival', 'Fragile items - please handle with care')"></textarea>
+        </div>
+
+        <!-- Contact Preference -->
+        <div class="form-group form-row full">
+          <label for="contactPreference">Preferred Contact Method</label>
+          <select id="contactPreference" name="contactPreference">
+            <option value="">Select preference...</option>
+            <option value="call">Phone Call</option>
+            <option value="sms">SMS</option>
+            <option value="whatsapp">WhatsApp</option>
+            <option value="email">Email</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem;">
+          Schedule Pickup
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Service Hours Section -->
+  <section style="background: #f8f9fa; padding: 3rem 1.5rem;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Our Service Hours</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 700px; margin: 0 auto;">
+        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(26, 58, 82, 0.1);">
+          <h4 style="color: var(--navy); margin-bottom: 1rem;">Monday - Friday</h4>
+          <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Pickup:</strong> 8:00 AM - 6:00 PM</p>
+          <p style="font-size: 1.1rem;"><strong>Delivery:</strong> 8:00 AM - 7:00 PM</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(26, 58, 82, 0.1);">
+          <h4 style="color: var(--navy); margin-bottom: 1rem;">Saturday</h4>
+          <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Pickup:</strong> 9:00 AM - 5:00 PM</p>
+          <p style="font-size: 1.1rem;"><strong>Delivery:</strong> 9:00 AM - 6:00 PM</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(26, 58, 82, 0.1);">
+          <h4 style="color: var(--navy); margin-bottom: 1rem;">Sunday</h4>
+          <p style="font-size: 1.1rem;"><strong>By Appointment Only</strong></p>
+          <p style="color: #666; margin-top: 0.5rem; font-size: 0.9rem;">Call us for special Sunday scheduling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="padding: 3rem 1.5rem;">
+    <div class="container" style="max-width: 700px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+      
+      <div style="margin-bottom: 2rem;">
+        <h4 style="color: var(--navy); margin-bottom: 0.5rem;">❓ How long does the scheduling take?</h4>
+        <p>Just a few minutes! Fill out the form with your preferred dates and times, and we'll confirm your appointment.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h4 style="color: var(--navy); margin-bottom: 0.5rem;">❓ Can I change my scheduled time?</h4>
+        <p>Yes! Contact us at least 24 hours before your scheduled pickup or delivery to make changes.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h4 style="color: var(--navy); margin-bottom: 0.5rem;">❓ What if I'm not home during pickup?</h4>
+        <p>Please note access instructions in the special instructions field. You can also arrange a different time in the form.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h4 style="color: var(--navy); margin-bottom: 0.5rem;">❓ Do you offer same-day service?</h4>
+        <p>Yes! We offer express service for urgent needs. Select express service in the order form or contact us directly.</p>
+      </div>
+
+      <div>
+        <h4 style="color: var(--navy); margin-bottom: 0.5rem;">❓ What areas do you service?</h4>
+        <p>We provide pickup and delivery services throughout Abuja. Contact us to confirm your location is within our service area.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section style="background: linear-gradient(135deg, var(--gold) 0%, #c49a2a 100%); color: var(--navy); padding: 3rem 1.5rem; text-align: center;">
+    <div class="container">
+      <h3 style="color: var(--navy); margin-bottom: 1rem;">Need Immediate Assistance?</h3>
+      <p style="margin-bottom: 1.5rem; font-size: 1rem;">Call us directly to schedule or ask any questions</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        <a href="tel:08038009469" class="btn" style="border-color: var(--navy); background: var(--navy); color: var(--gold);">
+          Call 08038009469
+        </a>
+        <a href="https://wa.me/2348038009469" class="btn" style="border-color: var(--navy); background: transparent; color: var(--navy);">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Tidy & Chic</h4>
+        <p>Premium laundry and cleaning services dedicated to quality garment care and customer satisfaction.</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="order.html">Place Order</a></li>
+          <li><a href="quote.html">Request Quote</a></li>
+          <li><a href="schedule.html">Schedule Pickup</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Laundry Washing</a></li>
+          <li><a href="#">Dry Cleaning</a></li>
+          <li><a href="#">Express Service</a></li>
+          <li><a href="#">Corporate Laundry</a></li>
+          <li><a href="#">Pickup & Delivery</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong></p>
+        <p><a href="tel:08038009469">08038009469</a></p>
+        <p><a href="tel:07036598546">07036598546</a></p>
+        <p><strong>Address:</strong></p>
+        <p>Plot 32 Bitex Pure Water Street<br>Jahi 1, Katampe District<br>Abuja, Nigeria</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Tidy & Chic Cleaning Services. All rights reserved. | Crafted with care for your garments.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
