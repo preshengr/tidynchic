@@ -11,12 +11,12 @@
   --light-gray: #f8f9fa;
   --dark-gray: #2c3e50;
   --accent-light: #e8dcc8;
-  
+
   /* Typography */
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-accent: 'Montserrat', sans-serif;
-  
+  --font-display: "Playfair Display", serif;
+  --font-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-accent: "Montserrat", sans-serif;
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -24,17 +24,17 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-xxl: 4rem;
-  
+
   /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-smooth: 0.4s ease;
   --transition-slow: 0.6s ease;
-  
+
   /* Box Shadows */
   --shadow-sm: 0 2px 8px rgba(26, 58, 82, 0.1);
   --shadow-md: 0 4px 16px rgba(26, 58, 82, 0.15);
@@ -83,7 +83,12 @@ button {
    TYPOGRAPHY
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   color: var(--navy);
   margin-bottom: var(--spacing-sm);
@@ -183,7 +188,7 @@ nav {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -249,7 +254,7 @@ nav {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -344,7 +349,7 @@ nav {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -372,12 +377,24 @@ nav {
   animation: slideUp 0.6s ease forwards;
 }
 
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.2s; }
-.service-card:nth-child(3) { animation-delay: 0.3s; }
-.service-card:nth-child(4) { animation-delay: 0.4s; }
-.service-card:nth-child(5) { animation-delay: 0.5s; }
-.service-card:nth-child(6) { animation-delay: 0.6s; }
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.service-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 .service-card:hover {
   transform: translateY(-10px);
@@ -421,12 +438,24 @@ nav {
   animation: fadeIn 0.8s ease forwards;
 }
 
-.feature-item:nth-child(1) { animation-delay: 0.2s; }
-.feature-item:nth-child(2) { animation-delay: 0.3s; }
-.feature-item:nth-child(3) { animation-delay: 0.4s; }
-.feature-item:nth-child(4) { animation-delay: 0.5s; }
-.feature-item:nth-child(5) { animation-delay: 0.6s; }
-.feature-item:nth-child(6) { animation-delay: 0.7s; }
+.feature-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.feature-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.feature-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.feature-item:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.feature-item:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.feature-item:nth-child(6) {
+  animation-delay: 0.7s;
+}
 
 .feature-icon {
   font-size: 2.5rem;
@@ -479,9 +508,15 @@ nav {
   animation: slideUp 0.6s ease forwards;
 }
 
-.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
-.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.testimonial-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.testimonial-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 .testimonial-card:hover {
   background: rgba(212, 175, 55, 0.1);
