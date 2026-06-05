@@ -769,11 +769,16 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: rgba(212, 175, 55, 0.2);
   border-radius: 50%;
   transition: all var(--transition-fast);
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
 }
 
 .social-icons a:hover {
