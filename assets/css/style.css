@@ -141,6 +141,11 @@ section {
   padding: var(--spacing-xxl) 0;
 }
 
+.grid-2 img {
+  width: 1000px;
+  height: 1500px;
+}
+
 /* ============================================
    NAVIGATION BAR
    ============================================ */
